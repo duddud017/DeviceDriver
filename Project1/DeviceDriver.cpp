@@ -1,6 +1,7 @@
 #include "DeviceDriver.h"
 
-DeviceDriver::DeviceDriver(FlashMemoryDevice* hardware) : m_hardware(hardware)
+DeviceDriver::DeviceDriver(FlashMemoryDevice* hardware) 
+    : m_hardware(hardware)
 {}
 
 int DeviceDriver::read(long address)
