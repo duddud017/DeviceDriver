@@ -5,6 +5,13 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Project1.vcxproj", "{96C0ED79-835F-483D-BD52-E2E937844EC1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{2C72A5AB-68C6-4584-A4C1-7CA820273ECB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample-Test1", "Sample-Test1\Sample-Test1.vcxproj", "{4636DBC0-4F07-411A-B85A-C3A4731A5018}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +28,14 @@ Global
 		{96C0ED79-835F-483D-BD52-E2E937844EC1}.Release|x64.Build.0 = Release|x64
 		{96C0ED79-835F-483D-BD52-E2E937844EC1}.Release|x86.ActiveCfg = Release|Win32
 		{96C0ED79-835F-483D-BD52-E2E937844EC1}.Release|x86.Build.0 = Release|Win32
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Debug|x64.ActiveCfg = Debug|x64
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Debug|x64.Build.0 = Debug|x64
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Debug|x86.ActiveCfg = Debug|Win32
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Debug|x86.Build.0 = Debug|Win32
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Release|x64.ActiveCfg = Release|x64
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Release|x64.Build.0 = Release|x64
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Release|x86.ActiveCfg = Release|Win32
+		{4636DBC0-4F07-411A-B85A-C3A4731A5018}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
