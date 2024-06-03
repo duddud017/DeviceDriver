@@ -29,6 +29,4 @@ void DeviceDriver::write(long address, int data)
     else {
         throw(std::logic_error("Device is not empty"));
     }
-    // TODO: implement this method
-    
 }

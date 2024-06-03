@@ -1,11 +1,14 @@
+#include <stdexcept>
+
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
+
 #include "../Project1/DeviceDriver.cpp"
 
 using namespace testing;
 using namespace std;
 
-class DeviceMock : public FlashMemoryDevice {
+class FlashDeviceMock : public FlashMemoryDevice {
 public:
 	MOCK_METHOD(unsigned char, read, (long address), (override));
 	MOCK_METHOD(void, write, (long address, unsigned char data), (override));
@@ -13,7 +16,7 @@ public:
 
 class DeviceTestFixture : public Test {
 public:
-	DeviceMock flashMem;
+	FlashDeviceMock flashMem;
 	DeviceDriver *testDD = new DeviceDriver(&flashMem);
 };
 
@@ -42,13 +45,14 @@ TEST_F(DeviceTestFixture, ReadTest3) {
 	// Read 를 호출 하면 5번 불려야 한다.
 	// 1번 다른 값이 불리면 exception이 호출 되어야 한다.
 	EXPECT_CALL(flashMem, read(0xA))
-		.Times(2)
 		.WillOnce(Return(0x5))
-		.WillRepeatedly(Return(0x3));
+		.WillOnce(Return(0x5))
+		.WillOnce(Return(0x5))
+		.WillOnce(Return(0x5))
+		.WillOnce(Return(0x3));
 
 	try {
 		int actual = testDD->read(0xA);
-
 		FAIL();
 	}
 	catch(exception &e) {
